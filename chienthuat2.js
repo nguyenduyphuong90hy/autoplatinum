@@ -51,10 +51,11 @@ $('#save_setting_game2').click(function() {
 });
 
 // Xử lý
-var counter_stop = 1;
+
 var stopeflg = 0;
 
 function start2(betMinAmount2) {
+    var counter_stop = 1;
     var counter = 0;
     var stopedelay;
     var labelStatus = $('.label.label-success').html();
