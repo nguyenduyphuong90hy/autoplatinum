@@ -14,6 +14,12 @@ $("#closemenu").click(function() {
         // Animation complete.
     });
 });
+// Tắt âm thanh //off_audio
+$("#off_audio").click(function() {
+   $("#audio_win").remove();
+   $("#audio_loss").remove();
+   $("#audio_winner").remove();
+});
 // Mở cài đặt 1
 $("#chienthuat1").click(function() {
     $("#chienthuat1_poup").show("slow", function() {
