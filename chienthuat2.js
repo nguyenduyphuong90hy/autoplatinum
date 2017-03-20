@@ -28,7 +28,7 @@ $("#minbet_choices2").change(function() {
 $('#save_setting_game2').click(function() {
     $('#mfpayoutmul').val('2x');
     var tilethang2 = $("#tilethang2").val() + '%';
-    $('#mfpayoutper').val(tilethang1);
+    $('#mfpayoutper').val(tilethang2);
     var betMinAmount2;
     var minbet_choices2 = Number($("#minbet_choices2").val());
     if (minbet_choices2 === 0) {
@@ -77,19 +77,19 @@ function start2(betMinAmount2) {
             var compare1 = Number($("#sovan1").val());
             var betAmount = Number($('#mfInputAmount').val());
             var sotienhientai = Number($("#balancesx").html());
-            if ((betAmount / betMinAmount1) >= 1000000000024) {
+            if ((betAmount / betMinAmount2) >= 1000000000024) {
                 // alert('Cảnh báo nguy hiểm');
                 return;
             }
             // Kiểm tra (Request timed out!) reset lại tiền đặt
             if ($("#text_result_out").html() == "Request timed out!") {
-                $('#mfInputAmount').val(betMinAmount1);
+                $('#mfInputAmount').val(betMinAmount2);
             }
             // kiểm tra số tiền hiện tại nhỏ hơn số tiền đặt cược thì reset
             if (betAmount < sotienhientai) {
                 $('#mfInputAmount').val(betAmount * 2);
             } else {
-                $('#mfInputAmount').val(betMinAmount1);
+                $('#mfInputAmount').val(betMinAmount2);
             }
             counter_stop++;
         }
@@ -108,7 +108,7 @@ function start2(betMinAmount2) {
         delayMil = Math.floor(Math.random() * (max - min + 1) + min);
     }
     setTimeout(function() {
-        start2(betMinAmount1);
+        start2(betMinAmount2);
     }, delayMil);
 }
 
