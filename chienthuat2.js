@@ -53,9 +53,9 @@ $('#save_setting_game2').click(function() {
 // Xử lý
 
 var stopeflg = 0;
+var counter_stop = 1;
 
 function start2(betMinAmount2) {
-    var counter_stop = 1;
     var counter = 0;
     var stopedelay;
     var labelStatus = $('.label.label-success').html();
@@ -64,7 +64,7 @@ function start2(betMinAmount2) {
     if (btnValue.indexOf('ĐỒNG Ý CƯỢC') != -1) {
         if (lCheckWin || labelStatus == "undefined") {
             // Set lại counter_stop khi thắng
-            counter_stop = 0;
+            counter_stop = 1;
             stopeflg = 0;
             //alert("THắng nè");
             $('#mfInputAmount').val(betMinAmount2);
