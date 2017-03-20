@@ -51,7 +51,7 @@ $('#save_setting_game2').click(function() {
 });
 
 // Xử lý
-var counter_stop = 0;
+var counter_stop = 1;
 var stopeflg = 0;
 
 function start2(betMinAmount2) {
@@ -85,10 +85,14 @@ function start2(betMinAmount2) {
             if ($("#text_result_out").html() == "Request timed out!") {
                 $('#mfInputAmount').val(betMinAmount2);
             }
-            // kiểm tra số tiền hiện tại nhỏ hơn số tiền đặt cược thì reset
-            if (betAmount < sotienhientai) {
+            // Kiểm tra
+            if(counter_stop == 2){
                 $('#mfInputAmount').val(betAmount * 2);
-            } else {
+                counter_stop = 1;
+            }
+            
+            // kiểm tra số tiền hiện tại nhỏ hơn số tiền đặt cược thì reset
+            if (betAmount > sotienhientai) {
                 $('#mfInputAmount').val(betMinAmount2);
             }
             counter_stop++;
