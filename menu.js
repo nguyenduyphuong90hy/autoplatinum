@@ -16,3 +16,5 @@ $("#off_audio").click(function() {
     $('#audio_icon').removeClass('fa fa-bell fa-fw').addClass('fa fa-bell-slash fa-fw');
     $("#audio_win").remove();$("#audio_loss").remove();$("#audio_winner").remove();
 });
+// Set hạn dùng exdate
+$("#div_handung").html(exdate);
