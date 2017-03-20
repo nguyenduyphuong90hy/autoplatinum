@@ -4,7 +4,7 @@ $("#chienthuat2").click(function() {
         $(".list-group").hide("slow", function() {});
     });
 });
-// Đóng cài đặt 1
+// Đóng cài đặt 2
 $("#dongchienthuat2").click(function() {
     $("#chienthuat2_poup").hide("slow", function() {});
 });
@@ -85,8 +85,10 @@ function start2(betMinAmount2) {
             if ($("#text_result_out").html() == "Request timed out!") {
                 $('#mfInputAmount').val(betMinAmount2);
             }
+            alert(counter_stop);
             // Kiểm tra
             if(counter_stop == 2){
+               alert("vào nhỏ giọt");
                 $('#mfInputAmount').val(betAmount * 2);
                 counter_stop = 1;
             }
