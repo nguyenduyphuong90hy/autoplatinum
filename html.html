@@ -32,15 +32,15 @@
          <input id="tilethang1" class="form-control margin-bottom-lg" style="" placeholder="Nhập tỉ lệ thắng (default 49.5% ván)" value="49.5">
          <label for"minbet_choices"="" style="display: block;">Cài đặt an toàn: </label>
          <span style="display: block;">Số ván dừng khi thua liên tiếp</span>
-         <input id="sovan1" class="form-control margin-bottom-lg" style="" placeholder="Dừng nếu thua liên tiếp (default 11 ván)" value="10">'
+         <input id="sovan1" class="form-control margin-bottom-lg" style="" placeholder="Dừng nếu thua liên tiếp (default 11 ván)" value="10">
          <select id="stop_choices1" storevar="games_option_x2_setting" class="form-control margin-bottom-lg">
             <option value="0">Dừng hẳn</option>
             <option value="1">Dừng trong khoảng thời gian</option>
          </select>
-         <input id="stoptime1" class="form-control margin-bottom-lg" style="display:none" placeholder="Nhập khoảng thời gian bạn muốn tạm dừng (milisecond)" autocomplete="off">
+         <input id="stoptime1" class="form-control margin-bottom-lg" style="display:none" placeholder="Nhập khoảng thời gian bạn muốn tạm dừng (s)" autocomplete="off">
          <label class="margin-bottom-lg"><input id="checkedChangeRoll1" class="form-control" type="checkbox" value="1" ><span>Đảo cửa sau ván win</span></label>
       </span>
-      <div id="result_message" class="alert alert-warning" type="games_option_x2">Số ván thua liên tiếp tối đa có thể chịu được (dựa trên Số tiền hiện tại): <b>0</b><br>Đánh giá: <span class="text-danger text-danger">Tài khoản không đủ tiền!</span></div>
+      <div id="result_message" class="alert alert-warning" type="games_option_x2">Số ván thua liên tiếp tối đa có thể chịu được (dựa trên Số tiền hiện tại): <b id="sovan_chiuduoc"></b><br><span class="text-danger">Dữ liệu chỉ mang tính tương đối !</span></div>
    </div>
    <div class="modal-footer"><button type="button" id="save_setting_game1" class="btn btn-success btnGameToolSubmit">Save & Start</button><button type="button" id="dongchienthuat1" class="btn btn-default btnGameToolClose" data-dismiss="modal">Đóng</button></div>
 </div>
@@ -72,7 +72,7 @@
             <option value="0">Dừng hẳn</option>
             <option value="1">Dừng trong khoảng thời gian</option>
          </select>-->
-         <!--<input id="stoptime1" class="form-control margin-bottom-lg" style="display:none" placeholder="Nhập khoảng thời gian bạn muốn tạm dừng (minisecond)" autocomplete="off">-->
+         <!--<input id="stoptime1" class="form-control margin-bottom-lg" style="display:none" placeholder="Nhập khoảng thời gian bạn muốn tạm dừng (s)" autocomplete="off">-->
          <label class="margin-bottom-lg"><input id="checkedChangeRoll2" class="form-control" type="checkbox" value="1" ><span>Đảo cửa sau ván win</span></label>
       </span>
       <!--<div id="result_message" class="alert alert-warning" type="games_option_x2">Số ván thua liên tiếp tối đa có thể chịu được (dựa trên Số tiền hiện tại): <b>0</b><br>Đánh giá: <span class="text-danger text-danger">Tài khoản không đủ tiền!</span></div>-->
